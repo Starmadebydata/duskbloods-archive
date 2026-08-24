@@ -1,0 +1,25 @@
+---
+import type { SiteStatus } from '../../utils/status';
+import { formatChecked } from '../../utils/status';
+interface Props { status: SiteStatus }
+const { status } = Astro.props;
+---
+<section id="current-status" class="ledger" aria-labelledby="status-heading">
+  <dl>
+    <div class="ledger-row">
+      <dt>Now</dt>
+      <dd>
+        <h2 id="status-heading">{status.headline}</h2>
+        <p>{status.summary}</p>
+      </dd>
+    </div>
+    <div class="ledger-row">
+      <dt>Checked</dt>
+      <dd>{formatChecked(status.updatedAt)}</dd>
+    </div>
+    <div class="ledger-row">
+      <dt>Source</dt>
+      <dd><a href={status.sourceUrl} rel="noopener">{status.sourceLabel}</a></dd>
+    </div>
+  </dl>
+</section>

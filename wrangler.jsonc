@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "duskbloods-archive",
+  "compatibility_date": "2026-08-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "duskbloodsarchive.com", "custom_domain": true },
+    { "pattern": "www.duskbloodsarchive.com", "custom_domain": true }
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SITE_STATUS",
+      "id": "ac7ae5bd21814e5e95cd08eb86d8f8e5"
+    },
+    {
+      "binding": "SESSION",
+      "id": "4b7ef12713814746a38bc5662badb504"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

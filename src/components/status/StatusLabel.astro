@@ -1,0 +1,12 @@
+---
+interface Props { status: 'confirmed' | 'test-build' | 'player-reported' | 'unconfirmed' }
+const copy = {
+  confirmed: { label: 'Confirmed', class: 'confirmed' },
+  'test-build': { label: 'Test-build only', class: 'test' },
+  'player-reported': { label: 'Player-reported', class: 'player' },
+  unconfirmed: { label: 'Unconfirmed', class: 'unconfirmed' }
+} as const;
+const { status } = Astro.props;
+const item = copy[status];
+---
+<span class={`label ${item.class}`}>{item.label}</span>

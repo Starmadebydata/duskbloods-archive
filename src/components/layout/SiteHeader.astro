@@ -1,0 +1,55 @@
+---
+import { moreNav, primaryNav, mobileGroups } from '../../data/navigation';
+interface Props { currentPath: string }
+const { currentPath } = Astro.props;
+const isCurrent = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+<header class="site-header">
+  <div class="wrap">
+    <div class="masthead-meta">
+      <span>Vol. I · Observatory</span>
+      <span>After the network test</span>
+      <span>24 Aug 2026</span>
+    </div>
+    <a class="wordmark" href="/">DUSKBLOODS ARCHIVE</a>
+    <nav class="nav-line" aria-label="Primary">
+      {primaryNav.map((item) => (
+        <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <details class="index-menu">
+        <summary>Index</summary>
+        <div class="index-panel">
+          {moreNav.map((item) => (
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </div>
+      </details>
+    </nav>
+    <div class="header-tools">
+      <a class="status-link" href="/#current-status">Now</a>
+      <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open index">☰</button>
+    </div>
+  </div>
+  <div class="mobile-drawer" id="mobile-menu" data-open="false">
+    <div class="wrap">
+      {mobileGroups.map((group) => (
+        <div>
+          <div class="group-label">{group.label}</div>
+          {group.items.map((item) => (
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const drawer = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const open = drawer?.getAttribute('data-open') === 'true';
+    drawer?.setAttribute('data-open', open ? 'false' : 'true');
+    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+</script>

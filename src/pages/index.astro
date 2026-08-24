@@ -1,0 +1,111 @@
+---
+export const prerender = false;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OfficialStill from '../components/content/OfficialStill.astro';
+import CurrentStatusDesk from '../components/status/CurrentStatusDesk.astro';
+import { getSiteStatus } from '../utils/status';
+import { guideIndex } from '../data/navigation';
+import { getGuideBySlug } from '../utils/content';
+import { absoluteUrl } from '../utils/seo';
+
+const status = await getSiteStatus();
+const home = await getGuideBySlug('');
+const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+---
+<BaseLayout
+  title="The Duskbloods: What We Know After the Network Test | Duskbloods Archive"
+  description={home.data.description}
+  canonical={absoluteUrl('/')}
+  bodyClass="is-home"
+  jsonLd={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Duskbloods Archive',
+      url: 'https://duskbloodsarchive.com/',
+      description: 'Unofficial English fan guide to The Duskbloods.'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'VideoGame',
+      name: 'The Duskbloods',
+      gamePlatform: 'Nintendo Switch 2',
+      author: { '@type': 'Organization', name: 'FromSoftware' }
+    }
+  ]}
+>
+  <section class="observatory">
+    <div class="observatory-art">
+      <img src="/images/official/moon-leap.jpg" alt="A Bloodsworn leaping above a gothic city under a pale moon. Official still from Nintendo." width="1400" height="788" fetchpriority="high" />
+    </div>
+    <div class="wrap observatory-copy">
+      <p class="issue">A record of confirmed details, not a storefront.</p>
+      <h1>The Duskbloods: What We Know After the Network Test</h1>
+      <p class="lede">Confirmed details, test findings, and the road to release—without rumor presented as fact.</p>
+      <p class="folio-links">
+        <a href="/network-test/">Open the recap</a>
+        <a href="/gameplay/">Read the match flow</a>
+      </p>
+      <p class="unofficial">Unofficial fan guide. Hero and stills from Nintendo of America. Sources linked on every page.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <CurrentStatusDesk status={status} />
+    <p class="colophon">
+      <span><b>Platform</b> Nintendo Switch 2</span>
+      <span><b>Developer</b> FromSoftware</span>
+      <span><b>Release</b> 2026</span>
+    </p>
+    <div class="still-strip">
+      <OfficialStill src="/images/official/square-combat.jpg" alt="Bloodsworn fighting in a square before a clock tower, with gunfire and a leaping fighter overhead." caption="Official still via Nintendo of America. The Duskbloods is an eight-player online battle." />
+      <OfficialStill src="/images/official/station-fog.jpg" alt="A fogged station and tram street in the Lands of Dusk." caption="Official still via Nintendo of America. Lowanro City is the Network Test land." />
+      <OfficialStill src="/images/official/kin-familiar.jpg" alt="A black winged familiar marked with glowing signs." caption="Official still via Nintendo of America. Kin compact with Bloodsworn in the test." />
+    </div>
+  </div>
+
+  <section class="chapter">
+    <div class="wrap">
+      <p class="kicker">Contents of the first edition</p>
+      <h2>What this archive holds</h2>
+      <ol class="contents">
+        {guideIndex.map((item, index) => (
+          <li>
+            <a href={item.href}>
+              <span class="num">{numerals[index]}</span>
+              <span>
+                <strong>{item.title}</strong>
+                <span>{item.summary}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="wrap">
+      <p class="kicker">Verified changes</p>
+      <h2>The last three facts that moved</h2>
+      <ol class="timeline">
+        <li><time>23 Aug 2026</time><div>Published US sessions ended after the fifth PDT window.</div></li>
+        <li><time>21 Aug 2026</time><div>First session closed early after game-server issues, according to reporting of FromSoftware's statement.</div></li>
+        <li><time>20 Aug 2026</time><div>Nintendo denied a September 24 release date.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="wrap">
+      <p class="kicker">How to read this desk</p>
+      <h2>Four labels, used in public</h2>
+      <div class="method">
+        <div><b>Confirmed</b><p>Nintendo or FromSoftware published it.</p></div>
+        <div><b>Test-build only</b><p>True in the network test. Retail may change.</p></div>
+        <div><b>Player-reported</b><p>Seen in the field. Not an official bulletin.</p></div>
+        <div><b>Unconfirmed</b><p>Does not belong in a title or a summary.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

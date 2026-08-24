@@ -1,0 +1,33 @@
+{
+  "name": "duskbloods",
+  "version": "1.0.0",
+  "description": "Duskbloods Archive \u2014 unofficial English guide to The Duskbloods for US players.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate:content": "node tests/content/validate.mjs",
+    "test": "node tests/content/validate.mjs"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.2.3",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@fontsource/newsreader": "^5.3.0",
+    "astro": "^7.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.125.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

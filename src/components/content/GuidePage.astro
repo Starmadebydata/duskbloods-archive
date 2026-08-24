@@ -1,0 +1,89 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EvidenceStamp from './EvidenceStamp.astro';
+import OfficialStill from './OfficialStill.astro';
+import { getGuideBySlug, getPolicyBySlug } from '../../utils/content';
+import { absoluteUrl } from '../../utils/seo';
+
+interface Props {
+  slug: string;
+  kind?: 'guides' | 'policies';
+  path: string;
+}
+const { slug, kind = 'guides', path } = Astro.props;
+const entry = kind === 'policies' ? await getPolicyBySlug(slug) : await getGuideBySlug(slug);
+const { Content, headings } = await render(entry);
+const d = entry.data;
+const related = d.relatedSlugs;
+const titles: Record<string, { href: string; label: string }> = {
+  'network-test': { href: '/network-test/', label: 'Network Test recap' },
+  'network-test-errors': { href: '/network-test/errors/', label: 'Login and server errors' },
+  gameplay: { href: '/gameplay/', label: 'How a match works' },
+  characters: { href: '/characters/', label: 'Bloodsworn and abilities' },
+  'weapons-and-powers': { href: '/weapons-and-powers/', label: 'Weapons and Powers' },
+  kin: { href: '/kin/', label: 'Kin' },
+  systems: { href: '/systems/', label: 'Virtue, Alliances, Sigils' },
+  'release-date': { href: '/release-date/', label: 'Release date status' },
+  'switch-2': { href: '/switch-2/', label: 'Switch 2, online, solo' },
+  'editorial-policy': { href: '/editorial-policy/', label: 'Editorial Policy' },
+  corrections: { href: '/corrections/', label: 'Corrections' },
+  contact: { href: '/contact/', label: 'Contact' },
+  about: { href: '/about/', label: 'About' }
+};
+---
+<BaseLayout title={`${d.title} | Duskbloods Archive`} description={d.description} canonical={absoluteUrl(path)} jsonLd={{
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  datePublished: d.publishedAt,
+  dateModified: d.updatedAt,
+  description: d.description
+}}>
+  <div class="wrap layout-guide">
+    <article class="prose">
+      <p class="folio"><a href="/">Archive</a> / {d.title}</p>
+      <h1>{d.title}</h1>
+      <p class="answer">{d.directAnswer}</p>
+      <EvidenceStamp status={d.status} lastCheckedAt={d.lastCheckedAt} primarySource={d.primarySource} primarySourceUrl={d.primarySourceUrl} />
+      {d.still && <OfficialStill src={d.still.src} alt={d.still.alt} caption={d.still.caption} />}
+      {d.stills?.map((item) => (
+        <OfficialStill src={item.src} alt={item.alt} caption={item.caption} />
+      ))}
+      <slot name="diagram" />
+      <Content />
+      <section class="sources">
+        <h2>Sources</h2>
+        <ul>
+          {d.sources.map((source) => (
+            <li>
+              <a href={source.url} rel="noopener">{source.name}</a>
+              — {source.supports}
+            </li>
+          ))}
+        </ul>
+      </section>
+      {d.changeLog.length > 0 && (
+        <section class="changelog">
+          <h2>Change log</h2>
+          <ul>
+            {d.changeLog.map((row) => (
+              <li><time>{row.date}</time> — {row.summary}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </article>
+    <aside class="toc">
+      <p class="kicker">Folio</p>
+      {headings.filter((h) => h.depth === 2).map((h) => (
+        <a href={`#${h.slug}`}>{h.text}</a>
+      ))}
+      <p class="kicker" style="margin-top:1.6rem">Also in this edition</p>
+      {related.map((item) => {
+        const link = titles[item] ?? { href: `/${item}/`, label: item };
+        return <a href={link.href}>{link.label}</a>;
+      })}
+    </aside>
+  </div>
+</BaseLayout>

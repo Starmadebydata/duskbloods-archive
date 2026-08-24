@@ -1,0 +1,12 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found | Duskbloods Archive" description="This address is not one of the published archive pages." canonical="https://duskbloodsarchive.com/404/" noindex={true}>
+  <div class="wrap" style="padding:5rem 0">
+    <p class="kicker">404</p>
+    <h1>This shelf is empty</h1>
+    <p class="lede">The address is not a published guide. Start at the archive home or the network test recap.</p>
+    <p><a class="btn" href="/">Return home</a></p>
+  </div>
+</BaseLayout>

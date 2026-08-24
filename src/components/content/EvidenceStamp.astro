@@ -1,0 +1,16 @@
+---
+import StatusLabel from '../status/StatusLabel.astro';
+import { formatChecked } from '../../utils/status';
+interface Props {
+  status: 'confirmed' | 'test-build' | 'player-reported' | 'unconfirmed';
+  lastCheckedAt: string;
+  primarySource: string;
+  primarySourceUrl: string;
+}
+const { status, lastCheckedAt, primarySource, primarySourceUrl } = Astro.props;
+---
+<div class="stamp">
+  <span>Status <StatusLabel status={status} /></span>
+  <span>Last checked {formatChecked(lastCheckedAt)}</span>
+  <span>Primary source <a href={primarySourceUrl} rel="noopener">{primarySource}</a></span>
+</div>
