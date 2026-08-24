@@ -16,6 +16,7 @@ The first edition has ten complete guides, source labels, official Nintendo stil
 - `npm run dev` runs the local site.
 - `npm run build` builds production files.
 - `npm run preview` previews the Cloudflare-style build.
+- `npm run indexnow` notifies Bing after a publish.
 
 ## Notes
 
