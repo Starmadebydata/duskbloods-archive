@@ -9,6 +9,40 @@ import { absoluteUrl } from '../utils/seo';
 const status = await getSiteStatus();
 const home = await getGuideBySlug('');
 const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+const folioStills: Record<string, { src: string; alt: string }> = {
+  '/network-test/': {
+    src: '/images/official/cathedral-gate.jpg',
+    alt: 'A Bloodsworn walking toward a tall iron cathedral gate.'
+  },
+  '/gameplay/': {
+    src: '/images/official/square-combat.jpg',
+    alt: 'Bloodsworn fighting together in a city square beneath a clock tower.'
+  },
+  '/characters/': {
+    src: '/images/official/street-fight.jpg',
+    alt: 'Several Bloodsworn fighting hooded enemies in a brick street.'
+  },
+  '/release-date/': {
+    src: '/images/official/cliff-swords.jpg',
+    alt: 'A Bloodsworn on a cliff overlooking a moonlit church.'
+  },
+  '/weapons-and-powers/': {
+    src: '/images/official/ridge-hunters.jpg',
+    alt: 'A long rifle and a curved sword in the same frame.'
+  },
+  '/kin/': {
+    src: '/images/official/kin-familiar.jpg',
+    alt: 'A black winged familiar marked with glowing signs.'
+  },
+  '/systems/': {
+    src: '/images/official/blood-mark.jpg',
+    alt: 'A pale hand marked with a circular blood sign.'
+  },
+  '/switch-2/': {
+    src: '/images/official/clocktower-viaduct.jpg',
+    alt: 'A clock tower and gothic viaduct under a red sky.'
+  }
+};
 ---
 <BaseLayout
   title="The Duskbloods: What We Know After the Network Test | Duskbloods Archive"
@@ -103,16 +137,18 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
     </p>
   </div>
 
-  <section class="chapter">
+  <section class="folio-desk">
     <div class="wrap">
       <p class="kicker reveal">Contents of the first edition</p>
       <h2 class="reveal">What this archive holds</h2>
-      <ol class="contents reveal">
+      <p class="lede reveal">Eight complete guides, each with sources and an official still.</p>
+      <ol class="folio-grid reveal">
         {guideIndex.map((item, index) => (
           <li>
-            <a href={item.href}>
-              <span class="num">{numerals[index]}</span>
-              <span>
+            <a class="folio-card" href={item.href}>
+              <img src={folioStills[item.href].src} alt={folioStills[item.href].alt} width="640" height="360" loading="lazy" />
+              <span class="folio-card-copy">
+                <span class="num">{numerals[index]}</span>
                 <strong>{item.title}</strong>
                 <span>{item.summary}</span>
               </span>
@@ -120,18 +156,21 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
           </li>
         ))}
       </ol>
+      <p class="unofficial">Official stills via Nintendo of America. Captions and sources sit on each guide.</p>
     </div>
   </section>
 
-  <section class="chapter">
+  <section class="labels-desk">
     <div class="wrap">
-      <p class="kicker reveal">How to read this desk</p>
-      <h2 class="reveal">Four labels, used in public</h2>
-      <div class="method reveal">
-        <div><b>Confirmed</b><p>Nintendo or FromSoftware published it.</p></div>
-        <div><b>Test-build only</b><p>True in the network test. Retail may change.</p></div>
-        <div><b>Player-reported</b><p>Seen in the field. Not an official bulletin.</p></div>
-        <div><b>Unconfirmed</b><p>Does not belong in a title or a summary.</p></div>
+      <div class="panel method-panel reveal">
+        <p class="panel-kicker">How to read this desk</p>
+        <h2>Four labels, used in public</h2>
+        <div class="method">
+          <div><b>Confirmed</b><p>Nintendo or FromSoftware published it.</p></div>
+          <div><b>Test-build only</b><p>True in the network test. Retail may change.</p></div>
+          <div><b>Player-reported</b><p>Seen in the field. Not an official bulletin.</p></div>
+          <div><b>Unconfirmed</b><p>Does not belong in a title or a summary.</p></div>
+        </div>
       </div>
     </div>
   </section>

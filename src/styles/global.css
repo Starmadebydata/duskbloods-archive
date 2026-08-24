@@ -860,3 +860,97 @@ body.is-home .observatory .lede {
   body.is-home .header-tools { top: 14px; right: 16px; }
   body.is-home .wordmark { font-size: 1.12rem; padding-top: .85rem; }
 }
+
+
+.folio-desk {
+  padding: 3.2rem 0 1rem;
+  position: relative;
+}
+.folio-desk .lede {
+  margin-bottom: 1.4rem;
+  max-width: 34rem;
+}
+.folio-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.folio-card {
+  display: grid;
+  grid-template-rows: 11.5rem auto;
+  min-height: 100%;
+  text-decoration: none;
+  border: 1px solid rgba(180, 138, 90, .42);
+  box-shadow: inset 0 0 0 1px rgba(141, 31, 45, .22);
+  background: rgba(18, 18, 24, .72);
+  overflow: hidden;
+}
+.folio-card img {
+  width: 100%;
+  height: 11.5rem;
+  object-fit: cover;
+  filter: saturate(.92) contrast(1.04);
+}
+.folio-card-copy {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: .85rem;
+  padding: .95rem 1rem 1.1rem;
+}
+.folio-card .num {
+  grid-row: 1 / span 2;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--blood);
+  font-size: 1.15rem;
+  padding-top: .15rem;
+}
+.folio-card strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.28rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.folio-card-copy span:last-child {
+  color: var(--ash);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+.folio-card:hover strong,
+.folio-card:focus-visible strong { color: #fff; }
+.folio-card:hover img,
+.folio-card:focus-visible img {
+  transform: scale(1.03);
+  transition: transform .45s ease;
+}
+.folio-desk .unofficial { margin-top: 1rem; }
+.labels-desk {
+  padding: 1.2rem 0 2rem;
+}
+.method-panel {
+  padding: 1.15rem 1.15rem 1.25rem;
+}
+.method-panel h2 { margin-bottom: .2rem; }
+body.is-home .method {
+  border-top: var(--rule);
+  margin-top: 1rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .folio-card img { transition: transform .45s ease; }
+}
+@media (max-width: 860px) {
+  .folio-grid { grid-template-columns: 1fr; }
+  .folio-card,
+  .folio-card img { height: auto; }
+  .folio-card { grid-template-rows: 10rem auto; }
+  .folio-card img { height: 10rem; }
+  body.is-home .method { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  body.is-home .method { grid-template-columns: 1fr; }
+}
