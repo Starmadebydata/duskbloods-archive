@@ -57,7 +57,7 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
       <span><b>Developer</b> FromSoftware</span>
       <span><b>Release</b> 2026</span>
     </p>
-    <div class="still-strip">
+    <div class="still-strip reveal">
       <OfficialStill src="/images/official/square-combat.jpg" alt="Bloodsworn fighting in a square before a clock tower, with gunfire and a leaping fighter overhead." caption="Official still via Nintendo of America. The Duskbloods is an eight-player online battle." />
       <OfficialStill src="/images/official/station-fog.jpg" alt="A fogged station and tram street in the Lands of Dusk." caption="Official still via Nintendo of America. Lowanro City is the Network Test land." />
       <OfficialStill src="/images/official/kin-familiar.jpg" alt="A black winged familiar marked with glowing signs." caption="Official still via Nintendo of America. Kin compact with Bloodsworn in the test." />
@@ -66,9 +66,9 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
 
   <section class="chapter">
     <div class="wrap">
-      <p class="kicker">Contents of the first edition</p>
-      <h2>What this archive holds</h2>
-      <ol class="contents">
+      <p class="kicker reveal">Contents of the first edition</p>
+      <h2 class="reveal">What this archive holds</h2>
+      <ol class="contents reveal">
         {guideIndex.map((item, index) => (
           <li>
             <a href={item.href}>
@@ -86,9 +86,9 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
 
   <section class="chapter">
     <div class="wrap">
-      <p class="kicker">Verified changes</p>
-      <h2>The last three facts that moved</h2>
-      <ol class="timeline">
+      <p class="kicker reveal">Verified changes</p>
+      <h2 class="reveal">The last three facts that moved</h2>
+      <ol class="timeline reveal">
         <li><time>23 Aug 2026</time><div>Published US sessions ended after the fifth PDT window.</div></li>
         <li><time>21 Aug 2026</time><div>First session closed early after game-server issues, according to reporting of FromSoftware's statement.</div></li>
         <li><time>20 Aug 2026</time><div>Nintendo denied a September 24 release date.</div></li>
@@ -98,9 +98,9 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
 
   <section class="chapter">
     <div class="wrap">
-      <p class="kicker">How to read this desk</p>
-      <h2>Four labels, used in public</h2>
-      <div class="method">
+      <p class="kicker reveal">How to read this desk</p>
+      <h2 class="reveal">Four labels, used in public</h2>
+      <div class="method reveal">
         <div><b>Confirmed</b><p>Nintendo or FromSoftware published it.</p></div>
         <div><b>Test-build only</b><p>True in the network test. Retail may change.</p></div>
         <div><b>Player-reported</b><p>Seen in the field. Not an official bulletin.</p></div>
@@ -108,4 +108,6 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
       </div>
     </div>
   </section>
+
+<script is:inline>const root=document.documentElement;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced&&'IntersectionObserver'in window){root.classList.add('motion-ok');const io=new IntersectionObserver((entries)=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('in-view');entry.target.classList.remove('await-view');io.unobserve(entry.target);}else if(!entry.target.classList.contains('in-view')){entry.target.classList.add('await-view');}}}, {rootMargin:'0px 0px -12% 0px',threshold:0.08});for(const el of document.querySelectorAll('.reveal, .chapter, .ledger')){io.observe(el);}}</script>
 </BaseLayout>

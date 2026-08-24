@@ -37,7 +37,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+    "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'sha256-er78z2StIF+RHXOmNE3vuDB4e/3OE5LehBRgVOCSIX4='; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
   );
   if (host.endsWith('.workers.dev')) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow');
