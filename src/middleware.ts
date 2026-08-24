@@ -3,6 +3,13 @@ import { defineMiddleware } from 'astro:middleware';
 export const onRequest = defineMiddleware(async (context, next) => {
   const host = context.url.hostname;
   const path = context.url.pathname;
+  const proto = context.request.headers.get('x-forwarded-proto') || context.url.protocol.replace(':','');
+  if (proto === 'http' && (host === 'duskbloodsarchive.com' || host === 'www.duskbloodsarchive.com')) {
+    const target = new URL(context.request.url);
+    target.protocol = 'https:';
+    target.hostname = 'duskbloodsarchive.com';
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
   if (host === 'www.duskbloodsarchive.com') {
     const target = new URL(context.url);
     target.hostname = 'duskbloodsarchive.com';

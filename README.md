@@ -2,7 +2,11 @@
 
 Unofficial English guide to The Duskbloods for US players.
 
-Preview (not a custom domain): https://duskbloods-archive.aifeefee70.workers.dev/
+Site: https://duskbloodsarchive.com/
+
+Preview (do not index): https://duskbloods-archive.aifeefee70.workers.dev/
+
+Code: https://github.com/Starmadebydata/duskbloods-archive
 
 The first edition has ten complete guides, source labels, official Nintendo stills, and a current-status desk for the network test.
 
