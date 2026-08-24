@@ -1,9 +1,7 @@
 ---
 export const prerender = false;
 import BaseLayout from '../layouts/BaseLayout.astro';
-import OfficialStill from '../components/content/OfficialStill.astro';
-import CurrentStatusDesk from '../components/status/CurrentStatusDesk.astro';
-import { getSiteStatus } from '../utils/status';
+import { getSiteStatus, formatChecked } from '../utils/status';
 import { guideIndex } from '../data/navigation';
 import { getGuideBySlug } from '../utils/content';
 import { absoluteUrl } from '../utils/seo';
@@ -42,26 +40,67 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
       <p class="issue">A record of confirmed details, not a storefront.</p>
       <h1>The Duskbloods: What We Know After the Network Test</h1>
       <p class="lede">Confirmed details, test findings, and the road to release, without rumor presented as fact.</p>
-      <p class="folio-links">
-        <a href="/network-test/">Open the recap</a>
-        <a href="/gameplay/">Read the match flow</a>
-      </p>
-      <p class="unofficial">Unofficial fan guide. Hero and stills from Nintendo of America. Sources linked on every page.</p>
+    </div>
+    <div class="wrap desk">
+      <section class="panel" aria-labelledby="verified-heading">
+        <p class="panel-kicker">Verified changes</p>
+        <h2 id="verified-heading">The last three facts that moved</h2>
+        <ol class="desk-facts">
+          <li><time datetime="2026-08-23">23 Aug 2026</time><div>Published US sessions ended after the fifth PDT window.</div></li>
+          <li><time datetime="2026-08-21">21 Aug 2026</time><div>First session closed early after game-server issues, according to reporting of FromSoftware's statement.</div></li>
+          <li><time datetime="2026-08-20">20 Aug 2026</time><div>Nintendo denied a September 24 release date.</div></li>
+        </ol>
+      </section>
+
+      <article class="panel panel-feature" id="current-status" aria-labelledby="status-heading">
+        <img class="panel-feature-art" src="/images/official/station-fog.jpg" alt="A fogged station and tram street in the Lands of Dusk." width="1400" height="788" />
+        <div class="panel-feature-copy">
+          <p class="panel-kicker">Now</p>
+          <h2 id="status-heading">{status.headline}</h2>
+          <p>{status.summary}</p>
+          <p class="folio-links">
+            <a href="/network-test/">Open the recap</a>
+            <a href="/gameplay/">Read the match flow</a>
+          </p>
+          <p class="unofficial">Official still via Nintendo of America. Lowanro City is the Network Test land. Checked {formatChecked(status.updatedAt)}. Source: <a href={status.sourceUrl} rel="noopener">{status.sourceLabel}</a>.</p>
+        </div>
+      </article>
+
+      <section class="panel" aria-labelledby="from-test-heading">
+        <p class="panel-kicker">From the test</p>
+        <h2 id="from-test-heading">What the stills show</h2>
+        <a class="desk-entry" href="/characters/">
+          <img src="/images/official/ridge-hunters.jpg" alt="A rifle-bearing Bloodsworn standing over a kneeling swordsman against a red sky." width="280" height="158" />
+          <span>
+            <strong>Six Bloodsworn</strong>
+            <span>Albert, Bloodhand Jan, Trang Lanh, Sniper Layla, Senator Samir Patres, and Zork.</span>
+          </span>
+        </a>
+        <a class="desk-entry" href="/kin/">
+          <img src="/images/official/kin-familiar.jpg" alt="A black winged familiar marked with glowing signs." width="280" height="158" />
+          <span>
+            <strong>Kin</strong>
+            <span>Eight test-build Kin, summoned from Ring, Blade, or Eye.</span>
+          </span>
+        </a>
+        <a class="desk-entry" href="/gameplay/">
+          <img src="/images/official/great-foe.jpg" alt="Two Bloodsworn attacking a giant frog-like foe on a stone stair." width="280" height="158" />
+          <span>
+            <strong>Dusk Battle</strong>
+            <span>Eight players, four phases, and a final three. The test uses one land: Lowanro City.</span>
+          </span>
+        </a>
+      </section>
     </div>
   </section>
 
   <div class="wrap">
-    <CurrentStatusDesk status={status} />
     <p class="colophon">
       <span><b>Platform</b> Nintendo Switch 2</span>
       <span><b>Developer</b> FromSoftware</span>
       <span><b>Release</b> 2026</span>
+      <span><b>Images</b> Official stills via Nintendo of America</span>
     </p>
-    <div class="still-strip reveal">
-      <OfficialStill src="/images/official/square-combat.jpg" alt="Bloodsworn fighting in a square before a clock tower, with gunfire and a leaping fighter overhead." caption="Official still via Nintendo of America. The Duskbloods is an eight-player online battle." />
-      <OfficialStill src="/images/official/station-fog.jpg" alt="A fogged station and tram street in the Lands of Dusk." caption="Official still via Nintendo of America. Lowanro City is the Network Test land." />
-      <OfficialStill src="/images/official/kin-familiar.jpg" alt="A black winged familiar marked with glowing signs." caption="Official still via Nintendo of America. Kin compact with Bloodsworn in the test." />
-    </div>
   </div>
 
   <section class="chapter">
@@ -80,18 +119,6 @@ const numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
             </a>
           </li>
         ))}
-      </ol>
-    </div>
-  </section>
-
-  <section class="chapter">
-    <div class="wrap">
-      <p class="kicker reveal">Verified changes</p>
-      <h2 class="reveal">The last three facts that moved</h2>
-      <ol class="timeline reveal">
-        <li><time>23 Aug 2026</time><div>Published US sessions ended after the fifth PDT window.</div></li>
-        <li><time>21 Aug 2026</time><div>First session closed early after game-server issues, according to reporting of FromSoftware's statement.</div></li>
-        <li><time>20 Aug 2026</time><div>Nintendo denied a September 24 release date.</div></li>
       </ol>
     </div>
   </section>
