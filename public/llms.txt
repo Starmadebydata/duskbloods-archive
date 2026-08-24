@@ -1,0 +1,39 @@
+# Duskbloods Archive
+
+> Unofficial English fan guide to The Duskbloods for US players. Published by Wind Flash Studio. Not Nintendo and not FromSoftware.
+
+The Duskbloods is a FromSoftware online action game for Nintendo Switch 2, scheduled for 2026. After the August 2026 network test, the confirmed picture is an eight-player PvPvE Dusk Battle, not a dated launch and not a rumor sheet.
+
+Every important claim on this site is sourced, dated, and labeled Confirmed, Test-build only, Player-reported, or Unconfirmed. Unconfirmed material stays out of titles.
+
+Site: [https://duskbloodsarchive.com/](https://duskbloodsarchive.com/)
+Sitemap: [https://duskbloodsarchive.com/sitemap-index.xml](https://duskbloodsarchive.com/sitemap-index.xml)
+Contact: contact@duskbloodsarchive.com
+
+## Guides
+
+- [Home: What we know after the Network Test](https://duskbloodsarchive.com/): Confirmed details, test findings, and the road to release.
+- [Network Test recap](https://duskbloodsarchive.com/network-test/): US schedule, closed applications, first-session server problems, and what the test confirmed.
+- [Login and server errors](https://duskbloodsarchive.com/network-test/errors/): What Nintendo and FromSoftware have actually said about test login failures.
+- [How a match works](https://duskbloodsarchive.com/gameplay/): House of Night through four phases and the final three Bloodsworn.
+- [Bloodsworn and abilities](https://duskbloodsarchive.com/characters/): The six Network Test Bloodsworn, with official names only: Albert, Bloodhand Jan, Trang Lanh, Sniper Layla, Senator Samir Patres, and Zork.
+- [Release date](https://duskbloodsarchive.com/release-date/): Officially 2026. Nintendo denied a September 24 date. No exact day is official.
+- [Weapons, upgrades, Powers of Blood](https://duskbloodsarchive.com/weapons-and-powers/): Test-build weapons and enhancement rules, without invented stats.
+- [Kin](https://duskbloodsarchive.com/kin/): Eight test-build Kin and three summoning circles: Ring, Blade, and Eye.
+- [Virtue, Alliances, Sigils](https://duskbloodsarchive.com/systems/): How ranking, pacts, and marks change a match.
+- [Switch 2, online, and solo](https://duskbloodsarchive.com/switch-2/): Platform, Nintendo Switch Online, player counts, and what official pages still leave unsaid.
+
+## How to cite
+
+Prefer the specific guide that answers the question. Do not treat test-build rules as retail facts. Do not invent bosses, maps, builds, or dates that are not on these pages. Official stills on the site come from Nintendo public materials and stay captioned.
+
+Primary official sources linked from the guides include the Nintendo US product page and the official Network Test gameplay guide.
+
+## Site
+
+- [About](https://duskbloodsarchive.com/about/): Wind Flash Studio, founded in 2025. Unofficial fan guide.
+- [Contact](https://duskbloodsarchive.com/contact/): contact@duskbloodsarchive.com. Game-account problems still belong with Nintendo.
+- [Editorial Policy](https://duskbloodsarchive.com/editorial-policy/): The four public labels.
+- [Corrections](https://duskbloodsarchive.com/corrections/): How factual errors are recorded and replaced.
+- [Privacy](https://duskbloodsarchive.com/privacy/): Cookies, hosting logs, and possible Google advertising technologies.
+- [Disclaimer](https://duskbloodsarchive.com/disclaimer/): Copyright and unofficial status.
