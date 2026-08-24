@@ -28,3 +28,9 @@ noindex: false
 ---
 
 Logged corrections will appear on this page and on the article they change. A denied rumor, such as the September 24 launch date, is documented on the [release date page](/release-date/) rather than quietly omitted.
+
+## How a correction is recorded
+
+A public correction on this archive should include four things: the wording we are replacing, the wording that replaces it, the date of the change, and the source that justified the change. That record stays on this page and on the article itself.
+
+If you spot an error, email contact@duskbloodsarchive.com. Do not send account passwords. Wind Flash Studio will not treat a social-media rumor as enough to overwrite a page unless an official source or a clear reporting record supports the change.

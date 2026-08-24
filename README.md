@@ -22,3 +22,7 @@ The first edition has ten complete guides, source labels, official Nintendo stil
 - The site is unofficial. Nintendo and FromSoftware remain the sources of truth.
 - Game images on the site are official stills hosted locally and captioned.
 - A custom domain has not been connected yet.
+
+## Content rules
+
+Later pages and interface work must follow docs/CONTENT_ARCHITECTURE.md. Do not add empty categories or duplicate guides to look larger.
