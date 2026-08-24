@@ -40,7 +40,9 @@ export const mobileGroups = [
       { href: '/editorial-policy/', label: 'Editorial Policy' },
       { href: '/corrections/', label: 'Corrections' },
       { href: '/about/', label: 'About' },
-      { href: '/contact/', label: 'Contact' }
+      { href: '/contact/', label: 'Contact' },
+      { href: '/privacy/', label: 'Privacy' },
+      { href: '/disclaimer/', label: 'Disclaimer' }
     ]
   }
 ] as const;

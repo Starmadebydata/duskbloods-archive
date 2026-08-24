@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://duskbloodsarchive.com',
   trailingSlash: 'always',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes("/privacy-policy") && !page.includes("/terms") })],
   adapter: cloudflare({
     imageService: 'compile',
     prerenderEnvironment: 'node'

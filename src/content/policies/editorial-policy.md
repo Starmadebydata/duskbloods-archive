@@ -19,7 +19,7 @@ sources:
     accessedAt: "2026-08-24"
     supports: "Example of an official source this policy prefers."
 directAnswer: "Every important claim should be labeled Confirmed, Test-build only, Player-reported, or Unconfirmed. Unconfirmed material stays out of titles and search summaries."
-relatedSlugs: ["corrections", "about"]
+relatedSlugs: ["corrections", "about", "disclaimer"]
 changeLog:
   - date: "2026-08-24"
     summary: "Policy published with the first edition."
@@ -37,3 +37,5 @@ noindex: false
 ## Updates
 
 Time-sensitive pages should be re-checked when official information moves. Replaced claims are kept in the change log so older wording does not vanish without a reason.
+
+Wind Flash Studio publishes this archive. The labels above are how the team treats evidence, not how Nintendo labels its own pages.

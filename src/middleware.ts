@@ -19,6 +19,17 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (path === '/index.html' || path === '/index') {
     return context.rewrite('/');
   }
+  const aliases: Record<string, string> = {
+    '/privacy-policy': '/privacy/',
+    '/privacy-policy/': '/privacy/',
+    '/terms': '/disclaimer/',
+    '/terms/': '/disclaimer/',
+    '/disclaimer': '/disclaimer/',
+  };
+  if (aliases[path]) {
+    const target = new URL(aliases[path], context.url.origin);
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
   const response = await next();
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
