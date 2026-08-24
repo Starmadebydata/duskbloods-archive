@@ -37,7 +37,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'sha256-ehAbcGULcwQHxa6eKx00xgjxTUgjBObwNAO/Mu/AlF8='; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+    "default-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'sha256-ehAbcGULcwQHxa6eKx00xgjxTUgjBObwNAO/Mu/AlF8=' 'sha256-s7klxNoBA3SizKvekmBGRSDjG7XymYlwdSdNHoF54/4=' 'sha256-esvl385kr3WmQCh2a9H1eoRK3mHD5m1VJeC/XNgvkiI=' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
   );
   if (host.endsWith('.workers.dev')) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow');

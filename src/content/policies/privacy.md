@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "How Duskbloods Archive and Wind Flash Studio handle information, cookies, hosting logs, and possible Google advertising technologies."
+description: "How Duskbloods Archive and Wind Flash Studio handle information, cookies, hosting logs, Google Analytics, and possible Google advertising technologies."
 slug: "privacy"
 pageType: policy
 primaryIntent: "Disclose site data practices and Google advertising cookies before any ads are shown."
@@ -25,13 +25,15 @@ sources:
     publishedAt: "2026-08-24"
     accessedAt: "2026-08-24"
     supports: "Google may use cookies and identifiers on partner sites."
-directAnswer: "Wind Flash Studio does not run accounts on this site and never asks for Nintendo passwords. Hosting logs and, if enabled, Google advertising cookies or anonymous Cloudflare statistics may still collect technical information such as IP address, cookie IDs, and pages viewed."
+directAnswer: "Wind Flash Studio does not run accounts on this site and never asks for Nintendo passwords. Google Analytics records page views. Hosting logs and, if enabled, Google advertising cookies may still collect technical information such as IP address, cookie IDs, and pages viewed."
 relatedSlugs: ["about", "contact", "disclaimer"]
 changeLog:
   - date: "2026-08-24"
     summary: "Privacy page published for the first edition."
   - date: "2026-08-24"
     summary: "Rewrote the policy to disclose hosting, contact mail, cookies, and possible Google ads."
+  - date: "2026-08-24"
+    summary: "Disclosed Google Analytics measurement on duskbloodsarchive.com."
 draft: false
 noindex: false
 ---
@@ -58,9 +60,16 @@ This site may use:
 
 - cookies or similar storage needed to load the page or remember a basic setting;
 - Cloudflare tools that measure anonymous page views;
+- Google Analytics cookies and similar measurement requests, which record pages viewed, approximate location, device, and how the visit reached the page;
 - Google advertising and measurement cookies **if and when** Google AdSense or related Google ads run on these pages.
 
 We do not currently place our own login cookies, because there is no login.
+
+## Google Analytics
+
+This site uses Google Analytics (measurement ID G-6QRN3TEKHR) on duskbloodsarchive.com. Google may set cookies or use similar identifiers to record that a page was viewed, how the visit reached the page, and basic device data. We use this to see which guides are read. We do not use it to sell a list of readers.
+
+How Google uses information from sites that use its services is described at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites). You can limit some Google measurement through your browser cookie settings.
 
 ## Google advertising (including AdSense)
 
