@@ -137,6 +137,31 @@ const folioStills: Record<string, { src: string; alt: string }> = {
     </p>
   </div>
 
+  <section class="watch-desk">
+    <div class="wrap">
+      <p class="kicker reveal">First edition</p>
+      <h2 class="reveal">Watch the first edition</h2>
+      <p class="lede reveal">45 seconds. Unofficial. Click to play.</p>
+      <div class="watch-frame reveal" data-video-player>
+        <video
+          poster="/videos/duskbloods-archive-hero.jpg"
+          preload="none"
+          playsinline
+          width="1920"
+          height="1080"
+        >
+          <source src="/videos/duskbloods-archive-hero.mp4" type="video/mp4" />
+          <track kind="captions" src="/videos/duskbloods-archive-hero.vtt" srclang="en" label="English" default />
+        </video>
+        <button type="button" class="watch-play" data-video-play aria-label="Play the first edition introduction">
+          <span class="watch-play-icon" aria-hidden="true"></span>
+          <span>Play</span>
+        </button>
+      </div>
+      <p class="unofficial">Unofficial fan guide. Not Nintendo and not FromSoftware. Stills via Nintendo of America.</p>
+    </div>
+  </section>
+
   <section class="folio-desk">
     <div class="wrap">
       <p class="kicker reveal">Contents of the first edition</p>
@@ -175,5 +200,5 @@ const folioStills: Record<string, { src: string; alt: string }> = {
     </div>
   </section>
 
-<script is:inline>const root=document.documentElement;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced&&'IntersectionObserver'in window){root.classList.add('motion-ok');const io=new IntersectionObserver((entries)=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('in-view');entry.target.classList.remove('await-view');io.unobserve(entry.target);}else if(!entry.target.classList.contains('in-view')){entry.target.classList.add('await-view');}}}, {rootMargin:'0px 0px -12% 0px',threshold:0.08});for(const el of document.querySelectorAll('.reveal, .chapter, .ledger')){io.observe(el);}}</script>
+<script is:inline>const root=document.documentElement;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced&&'IntersectionObserver'in window){root.classList.add('motion-ok');const io=new IntersectionObserver((entries)=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('in-view');entry.target.classList.remove('await-view');io.unobserve(entry.target);}else if(!entry.target.classList.contains('in-view')){entry.target.classList.add('await-view');}}}, {rootMargin:'0px 0px -12% 0px',threshold:0.08});for(const el of document.querySelectorAll('.reveal, .chapter, .ledger')){io.observe(el);}}const frame=document.querySelector('[data-video-player]');const video=frame&&frame.querySelector('video');const play=frame&&frame.querySelector('[data-video-play]');if(frame&&video&&play){play.addEventListener('click',()=>{frame.classList.add('is-playing');video.setAttribute('controls','');video.play();});video.addEventListener('ended',()=>{frame.classList.remove('is-playing');video.removeAttribute('controls');video.pause();video.currentTime=0;});}</script>
 </BaseLayout>
