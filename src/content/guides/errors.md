@@ -37,6 +37,8 @@ relatedSlugs: ["network-test", "switch-2"]
 changeLog:
   - date: "2026-08-21"
     summary: "Documented first-session login and server failures from official and reporting sources."
+  - date: "2026-08-24"
+    summary: "Expanded with rechecked official material and rewritten in plain English."
 draft: false
 noindex: false
 still:
@@ -44,38 +46,35 @@ still:
   alt: "A Bloodsworn approaching a closed cathedral gate."
   caption: "Official still via Nintendo of America. This page covers login and server failures, not a promised fix."
 ---
-
-This is a problem page, not a promise that any home-network tweak will restore a downed game server.
+This page separates what is confirmed from what people guessed during the first test weekend. It is not a promise that any home-network tweak will restore a downed game server.
 
 ## Current state
 
-As of August 24, 2026, the published US sessions are over. If you still have the test build installed, leftover login errors do not mean a hidden extra session is running.
+The published US sessions ran August 21 to 23, 2026. If you still have the test build installed, leftover login errors do not mean a hidden extra session is running.
 
 ## Confirmed
 
 - FromSoftware closed the first session early because of game-server issues and said later schedules would be announced.
 - Testers reported being stuck on the title screen while trying to connect.
-- The official test page already warned that Wi-Fi can be unstable and suggested a wired connection, pointing to Nintendo's Switch 2 internet FAQ.
-- The official page also said bugs may occur because the build is still in development.
+- The official test page warned that Wi-Fi can be unstable depending on your physical setup and suggested trying a wired connection, pointing to Nintendo's Switch 2 internet FAQ.
+- The same page said bugs may occur because the build is still in development.
 
 ## A different official error
 
-Nintendo Support article 71792 is about applying for the test: "We were unable to obtain information necessary for your application." The published fix is to check the Country/region setting when linking a Nintendo Account. That article does not claim to repair in-game login failures during a live session.
+Nintendo Support article 71792 covers a different message: "We were unable to obtain information necessary for your application," seen while applying for the test. The published fix is to check the Country/region setting when linking your Nintendo Account, then agree to finish linking. On a desktop browser you may need to select See details or Edit to show that option. That article does not claim to repair in-game login failures during a live session.
 
 ## What you can do
 
 - For leftover test-client issues, use the Network Test operations contact listed in the official gameplay guide, not a fan site.
-- If your connection is generally unstable on Switch 2, Nintendo's internet FAQ is the right place to start.
-- Do not keep retrying in the expectation that this archive can see live server health. It cannot.
+- If your connection is generally unstable on Switch 2, start with Nintendo's internet connection FAQ.
+- Keep expectations honest. This archive does not see live server health.
 
 ## What not to do
 
-- Do not treat a YouTube workaround as confirmed.
-- Do not assume sitting nearer a router will repair a closed session. Eurogamer's update said that advice did not appear to help.
+- Do not treat a video workaround as confirmed.
+- Do not assume sitting nearer the router repairs a closed session. Eurogamer's update said that advice did not appear to help.
 - Do not send account passwords to unofficial pages.
 
 ## Still unknown
 
-- Exact error-code list from the client.
-- Whether affected players will be invited again.
-- Whether the later weekend sessions fully recovered. This page does not invent a green light without an official after-action note.
+The exact error-code list from the client, whether affected players will be invited again, and whether the later weekend sessions fully recovered. There is no official after-action note yet, so this page will not invent a green light.

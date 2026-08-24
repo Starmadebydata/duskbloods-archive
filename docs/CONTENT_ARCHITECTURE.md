@@ -21,6 +21,8 @@ It is not a wallpaper dump, not a rumor mill, and not a page farm built for ads.
 7. Privacy must keep cookie, Google advertising, and identifier disclosures even before ads run.
 8. Official stills illustrate a fact and stay captioned. They are not a gallery product.
 9. Test-build rules stay marked as test-build. Denied dates stay on the release-date page.
+
+11. Write in plain English. No em dashes or en dashes, no promotional adjectives, no filler, no AI-tell vocabulary. `npm test` scans for these.
 10. New pages need a distinct `primaryIntent`, a direct answer near the top, sources, and enough body text to stand alone.
 
 ## Labels

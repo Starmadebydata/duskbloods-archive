@@ -1,6 +1,6 @@
 ---
 title: "The Duskbloods Weapons, Upgrades and Powers of Blood"
-description: "Official Network Test weapons, Alchemy Forge upgrades, and Powers of Blood—without made-up damage numbers."
+description: "Official Network Test weapons, Alchemy Forge upgrades, and Powers of Blood, without made-up damage numbers."
 slug: "weapons-and-powers"
 pageType: reference
 primaryIntent: "Cover confirmed weapons and enhancement systems in one page."
@@ -23,6 +23,8 @@ relatedSlugs: ["characters", "gameplay", "kin"]
 changeLog:
   - date: "2026-08-24"
     summary: "Collected official weapon names and upgrade rules; no numeric table added."
+  - date: "2026-08-24"
+    summary: "Expanded with rechecked official material and rewritten in plain English."
 draft: false
 noindex: false
 still:
@@ -30,8 +32,9 @@ still:
   alt: "A long rifle and a curved sword in the same frame."
   caption: "Official still via Nintendo of America. Test-build Bloodsworn pair melee tools with ranged partners. No unofficial damage numbers are added here."
 ---
-
 ## Confirmed weapons in the Network Test
+
+Each of the six test Bloodsworn brings a melee tool, and most pair it with a ranged partner. The official guide names them:
 
 | Bloodsworn | Melee | Ranged or partner |
 | --- | --- | --- |
@@ -42,20 +45,20 @@ still:
 | Senator Samir Patres | Senate Rapier | Soulbird Ring |
 | Zork | Undersea Cable | Speargun |
 
-## Alchemy Forge
+## Alchemy Forge and weapon enhancement
 
-Alchemy Forges appear as a regional feature. The guide says you can imbue weapons with fire or other affinities. Enhancing again at a matching forge raises the enhancement level by one. No official cap or damage formula was published in that document.
+Alchemy Forges appear as a regional feature in the Lands of Dusk. At a forge you can imbue a weapon with fire or another affinity. If you upgrade the weapon again at a matching forge, its enhancement level rises by one. The guide does not publish a cap, a damage formula, or how much one level changes. Treat any number you see elsewhere as unverified.
+
+A separate regional feature covers skills instead of weapons. Bloodsacs wander the land during certain phases. Defeat them and you receive blood crystals that improve your Bloodsworn's skills.
 
 ## Powers of Blood
 
-Defeat great foes and trespassers to choose one of two Powers of Blood. Up to five acquired powers can be manifested at once, managed through Blood Manifestation and Quick Items. Nearby Bloodsworn can be invited into a trespasser fight.
+Great foes and trespassers drop Powers of Blood. When you earn one, you pick one of two options. You can manifest up to five acquired powers at a time, and you manage them through the Blood Manifestation and Quick Items menu. When a trespasser fight starts, nearby Bloodsworn get invited to join. The guide does not list the full power catalog, so this page does not invent one.
 
-## Other tools from exploration
+## Items you can pick up
 
-The guide names a Fire Flask that starts a blaze and a Memorial Stake you can plant as a revive point. Goldblood Stakes restore HP. None of these entries include unofficial stat blocks.
+Two items in the guide show how exploration tools work. The Fire Flask sets a raging blaze. The Memorial Stake can be planted in the ground so you revive there after death. Goldblood Stakes restore HP, and you refill them by defeating enemies or finding effects on the map. Items dropped by enemies do not count toward the Collector Commendation. Rarer and newly acquired items contribute more there.
 
 ## Still unknown
 
-- Complete retail weapon list.
-- Attack values, scaling formulas, and tier lists.
-- Whether every test-build weapon returns unchanged.
+The complete retail weapon list, attack values, scaling formulas, and any honest tier ranking. If a page promises you a best-weapon list today, it is guessing.

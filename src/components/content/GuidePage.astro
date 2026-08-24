@@ -59,8 +59,8 @@ const titles: Record<string, { href: string; label: string }> = {
         <ul>
           {d.sources.map((source) => (
             <li>
-              <a href={source.url} rel="noopener">{source.name}</a>
-              — {source.supports}
+              <a href={source.url} rel="noopener">{source.name}</a>.
+              {source.supports}
             </li>
           ))}
         </ul>
@@ -70,7 +70,7 @@ const titles: Record<string, { href: string; label: string }> = {
           <h2>Change log</h2>
           <ul>
             {d.changeLog.map((row) => (
-              <li><time>{row.date}</time> — {row.summary}</li>
+              <li><time>{row.date}</time>. {row.summary}</li>
             ))}
           </ul>
         </section>

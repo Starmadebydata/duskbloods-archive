@@ -29,7 +29,7 @@ draft: false
 noindex: false
 ---
 
-Wind Flash Studio publishes Duskbloods Archive. The studio was founded in 2025. The team works on careful, source-tracked public information and related services. On this site, that means confirmed game details for US English players—not rumor written as fact.
+Wind Flash Studio publishes Duskbloods Archive. The studio was founded in 2025. The team works on careful, source-tracked public information and related services. On this site, that means confirmed game details for US English players, not rumor written as fact.
 
 The archive exists to answer what The Duskbloods is, what the network test showed, and what remains unconfirmed. It does not sell the game, host player accounts, or speak for the developers.
 

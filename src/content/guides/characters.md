@@ -30,6 +30,8 @@ relatedSlugs: ["gameplay", "weapons-and-powers", "kin"]
 changeLog:
   - date: "2026-08-24"
     summary: "Published the six official test-build Bloodsworn, with no extra names."
+  - date: "2026-08-24"
+    summary: "Expanded with rechecked official material and rewritten in plain English."
 draft: false
 noindex: false
 still:
@@ -41,51 +43,34 @@ stills:
     alt: "Several Bloodsworn fighting hooded enemies in a brick street."
     caption: "Official still via Nintendo of America. Alliances can put Bloodsworn on the same side until the final phase."
 ---
+Players search for characters. The game calls them Bloodsworn: fighters given superhuman abilities by the power of blood, summoned to fight at the Dusk of Humanity. The Network Test build has six. The official guide also says Bloodsworn Skills and aspects are customizable in the release version, so treat everything below as test-build information.
 
-Searchers say characters. The game says Bloodsworn: supernatural fighters given power by blood, summoned to battle at the Dusk of Humanity.
-
-The official Network Test guide calls out **six Bloodsworn in that build**. This page does not create extra names from trailers.
+All six share basic movement: high-jumping, air jumping, and dashing. Each fights with weapons suited to melee or ranged combat, and each has unique Bloodsworn Skills. Some skills only unlock at certain levels.
 
 ## Albert
 
-- Weapons: Lorrik's Jeweled Saber and a submachine gun.
-- Skills: Blood Blade; Light of Hayern.
-- Aspects: High Lorrik Blood; Upriser.
+Albert carries Lorrik's Jeweled Saber for melee and a submachine gun for ranged fire. Blood Blade fires a blade made of his own blood and scales with his blood caliber. Light of Hayern shines a beam from a crystal mounted on the saber's casing. His aspects are High Lorrik Blood, which gives blood-based skills extra usages, and Upriser, which raises stagger potential against Bloodsworn who hold high Virtue.
 
 ## Bloodhand Jan
 
-- Weapons: Bloodthirsty Axe and Stone of Sorcery.
-- Skills: Blink; Surrender to My Blood.
-- Aspects: Bloodhand Lineage; Lord of Blood.
+Jan fights with a bloodstained axe and the Stone of Sorcery embedded in his left hand, which can send flames straight ahead. Blink uses his blood to speed up evasion for a limited time. Surrender to My Blood quenches the axe's thirst with his blood, strikes it into the ground, and tears the area around him with blood slashes. His aspects are Bloodhand Lineage, which restores HP when he counterattacks after taking damage, and Lord of Blood, which heals the HP of spellbound foes and raises attack power.
 
 ## Trang Lanh
 
-- Weapons: Full Moon Blade, usable in melee or thrown.
-- Skills: Darkmoon; Mama Nātha.
-- Aspects: Alluring Bride; Daughter of the Darkmoon.
+Trang Lanh uses the Full Moon Blade, a circular blade of cold silver that works in melee or as a thrown chakram. Darkmoon hides her behind the darkmoon for a limited period. Mama Nātha summons a giant silver serpent, the guardian of the Ratnam, to attack the area around her. Her aspects are Alluring Bride, which spellbinds nearby enemies when she drinks blood, and Daughter of the Darkmoon, which hides her from distant foes and makes her harder to target.
 
 ## Sniper Layla
 
-- Weapons: Hieroglyph Katars and a sniper rifle.
-- Skills: Neb-ra Vanishing; Verd Gatling Gun.
-- Aspects: Neb-ra Lineage; Nighteye.
+Layla wields Hieroglyph Katars in both hands for melee, paired with a sizable sniper rifle she can aim precisely. Neb-ra Vanishing turns her into a swarm of insects to move to a distant spot and leaves a confusing afterimage. Verd Gatling Gun extracts a giant Gatling gun from her body and fires a rapid barrage. Her aspects are Neb-ra Lineage, which gradually restores HP to half of max and makes Goldblood Stakes restore less than usual, and Nighteye, which extends lock-on and observation range.
 
 ## Senator Samir Patres
 
-- Weapons: Senate Rapier and Soulbird Ring.
-- Skills: Bloodstake; Saurian Form.
-- Aspects: Blood Disciple; Unshakable Sword.
+The Senator uses a Senate Rapier, a narrow straight sword, and the Soulbird Ring, which sends a prehistoric spectral bird at range. Bloodstake forms a swamp of blood at an enemy's feet and raises a colossal stake from it. Saurian Form turns him into a carnivorous dinosaur that charges and bites. His aspects are Blood Disciple, which lowers the required level for Bloodsworn Skills, and Unshakable Sword, which boosts melee attack power after a perfect guard.
 
 ## Zork
 
-- Weapons: Undersea Cable and Speargun.
-- Skills: Missile; Human Rocket.
-- Aspects: Law of the Deep Sea; Dread Resonance.
-
-Shared movement from the guide includes high-jumping, air jumping, and dashing. Each Bloodsworn fights with melee or ranged tools and unique Bloodsworn Skills.
+Zork swings a severed undersea cable for melee and fires a speargun at range. Missile deploys a cannon from the back of his diving suit, assumes a firing stance, and shoots. Human Rocket deploys a propulsion mechanism and sends him charging forward in flight mode. His aspects are Law of the Deep Sea, which steals max HP from Bloodsworn he defeats and loses it if one of them defeats him back, and Dread Resonance, an inhuman-frequency howl that you can hold to extend.
 
 ## Still unknown
 
-- The full retail roster.
-- Final skill numbers, damage, or "best character" rankings. Those would be invented.
-- How far customization goes on day one.
+The full retail roster, final damage numbers, and how far customization goes on day one. This page will not rank a best character from test footage.

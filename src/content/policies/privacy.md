@@ -90,4 +90,4 @@ To ask what we hold from your email, or to ask us to delete a message you sent, 
 
 ## Changes
 
-If this policy changes in a material way—especially if we add accounts, comments, or new advertising partners—we will update this page and the date above.
+If this policy changes in a material way, especially if we add accounts, comments, or new advertising partners, we will update this page and the date above.

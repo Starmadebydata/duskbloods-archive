@@ -30,6 +30,8 @@ relatedSlugs: ["characters", "weapons-and-powers", "kin", "systems"]
 changeLog:
   - date: "2026-08-24"
     summary: "Guide assembled from the official Network Test gameplay document."
+  - date: "2026-08-24"
+    summary: "Expanded with rechecked official material and rewritten in plain English."
 draft: false
 noindex: false
 still:
@@ -41,43 +43,42 @@ stills:
     alt: "Two Bloodsworn attacking a giant frog-like foe on a stone stair."
     caption: "Official still via Nintendo of America. Great foes are one way to earn Repulsion Virtue in the test."
 ---
-
-This page follows the official Network Test gameplay guide. Systems described here are test-build unless Nintendo or FromSoftware repeat them for the retail game.
+This page follows the official Network Test gameplay guide. Everything below describes the test build. Nintendo or FromSoftware may change any of it for the release version.
 
 ## Confirmed facts
 
-- Up to eight Bloodsworn fight in a Dusk Battle.
-- The battle is split into four phases.
-- The grail culls players as phases advance.
-- In the final phase, the three Bloodsworn with the highest Virtue are beckoned.
-- The moontears flow for one of those three.
-- The Network Test map is one land: Lowanro City, with a clock tower, cathedral, cave, forest, and lake.
-- Bloodsworn can revive until they fail a culling.
-- Matchmaking can use Standard, No Alliances, or Bloodbound Alliances.
+A Dusk Battle is an online match for up to eight Bloodsworn. The battle runs through four phases. As phases advance, the grail culls the field. At the end of Phase III, the three Bloodsworn with the highest Virtue are beckoned to the final battle for the Moon Blood Bestowal. Only one of them wins.
+
+The Network Test uses one land: Lowanro City. The guide describes a towering clock tower and cathedral at its center, with a cave, a forest, and a lake around them. Bloodsworn can revive any number of times until they fail to survive a culling. After that, the match is over for them.
+
+Matchmaking has three rules in the test. Standard is the default. No Alliances removes alliance petitions. Bloodbound Alliances locks every Bloodsworn into pairs from Phase I through the final phase, and those pairs stay together at the end.
+
+## House of Night
+
+The House of Night is the hub. You pick your Bloodsworn here, and you can set which matchmaking rule you want. Three parts of the house matter before your first match:
+
+- Battle Remembrance replays parts of Dusk Battles so you can learn the rules before a live fight. The guide recommends starting here.
+- The Archive stores tutorials, Bloodsworn weapons, Kin you have compacted with, items, Powers of Blood, and events you have encountered. You can also open it mid-battle from the info screen.
+- The Courtyard lets you practice on the Graveyard Scarecrow. You can swap the scarecrow for a different opponent, compact with any Kin, and change your Bloodsworn level for practice.
 
 ## One match, in order
 
-Start in the House of Night: pick a Bloodsworn, read the archive, practice in the courtyard, then choose rules. Battle Remembrance can teach parts of a fight before you enter a live match.
+You start in Phase I exploring the land. Defeat enemies and explore to gather Virtue and strengthen your Bloodsworn. Regional features change each phase, and the map shows them next to each area name. In Phases II and III, ritual sites appear after enough time passes. Ritual sites are where Sword Virtue and Pledge Virtue come from, and they force the question of whether you fight or pledge. Leaving a ritual site after you enter it costs HP.
 
-Once summoned, explore and fight to gather Virtue. Regional features rotate by phase: corpses for Flame Virtue, Bloodsacs for skill enhancement, Alchemy Forges for weapon affinity, and smaller Kin circles for Kin experience.
+Also in Phases II and III, events can reshape the land. The guide gives two examples: a zeppelin you can call for supporting fire, and a storm that moves players to other locations.
 
-Ritual sites appear in the later phases. There you can take a redstone and hunt other Bloodsworn for Sword Virtue, or a goldstone and swear a pledge for Pledge Virtue. Leaving after entering a ritual site costs HP.
+At the end of Phase III, the grail calls the three highest-Virtue Bloodsworn. Each of them gets two lives, plus extra HP based on the Virtue they earned up to that point. Whoever is left standing receives the bestowal.
 
 ## Combat basics from the guide
 
-- Fill a stagger gauge, then drink blood to deal heavy damage and recover HP.
-- Weaker foes can become spellbound and follow you.
-- Howling can interrupt an attack and raise stagger, and can deflect some ranged hits.
-- Guarding blocks the front; repeated hits break the shield.
-- Goldblood Stakes restore HP and refill by defeating enemies or finding map effects.
-- Instant travel exists on the map, but not at phase start, not right after a warp or revive, and not while you are in a fight.
-
-## Rules that change the match
-
-Standard is the default. No Alliances removes pacts. Bloodbound Alliances keeps pairs together through the final phase. The guide says the release version is planned to let friends enter matchmaking already in a blood pact.
+- Attacks fill a stagger gauge. Fill it and the enemy is staggered, which opens them up.
+- You can drink the blood of a staggered enemy for heavy damage and HP recovery. Weaker-willed foes become spellbound when you drink their blood, and then they follow you.
+- Howling produces a gust of wind. A well-timed howl interrupts an enemy attack and raises their stagger gauge a lot. Howling can also deflect some ranged attacks.
+- Guarding blocks attacks from the front. Repeated hits break the shield, and a broken shield repairs over time. A guard counter right after a block makes you harder to interrupt.
+- Goldblood Stakes restore HP. Defeat enemies or find effects on the map to refill them.
+- Target Lock Switching lets you decide whether the lock-on favors enemies that attacked you. It is off by default.
+- Instant travel exists through the map. You cannot use it at the start of a phase, for a while after you travel or revive, or while you are in a fight.
 
 ## Still unknown
 
-- Exact phase timers and culling thresholds as numbers.
-- How much of Lowanro City will ship in retail.
-- Whether every test-build system name survives unchanged.
+The guide does not publish phase timers or the exact Virtue cut lines. It also does not say whether every system in this build ships unchanged in the release version.

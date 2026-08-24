@@ -21,6 +21,12 @@ const required = [
   'directAnswer','relatedSlugs','draft','noindex'
 ];
 const forbidden = [/coming soon/i, /lorem ipsum/i, /click here to support us/i, /placeholder page/i];
+const AI_STYLE = [
+  ['em dash', /—/],
+  ['en dash', /–/],
+  ['curly quote', /[“”‘’]/],
+  ['ai vocabulary', /\b(additionally|crucial|pivotal|delve|showcase|underscore|garner|intricate|interplay|tapestry|testament|vibrant|landscape|fostering|enhance|align with|highlighting|in order to|it is important to note|not only|plays a key role)\b/i]
+];
 
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -91,6 +97,12 @@ for (const file of files) {
   if (/2026-09-24/.test(text) && !file.includes('release-date')) {
     console.error('Denied date leaked outside release page', file);
     failed += 1;
+  }
+  for (const [label, pattern] of AI_STYLE) {
+    if (pattern.test(text)) {
+      console.error('Style issue:', label, file);
+      failed += 1;
+    }
   }
 }
 
